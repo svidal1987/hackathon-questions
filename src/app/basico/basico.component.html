@@ -1,0 +1,52 @@
+<div *ngIf="carrera=='AS'">
+    <p>Definir para Básico AS </p>
+</div>
+<div *ngIf="carrera=='TSH'">
+
+    <mat-card-subtitle>Para descargar las instrucciones responder marcar Verdadero/Falso las siguientes afirmaciones</mat-card-subtitle>
+
+    <form style="display: grid;">
+        
+        <mat-label class="label">1 - La ley del ohm expresa que la corriente es inversamente proporcional al voltaje y directamente proporcional a la resistencia.</mat-label>
+        <mat-radio-group color="primary" [(ngModel)]="pregunta1" name="pregunta1" aria-label="Select an option">
+            <mat-radio-button value="V">Verdadero</mat-radio-button>
+            <mat-radio-button value="F">Falso</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-label class="label">2 - Cuando se conectan 4 resistencia de igual valor en paralelo, el valor de la resistencia resultante es igual al valor de una de ellas dividido por cuatro.</mat-label>
+        <mat-radio-group color="primary" [(ngModel)]="pregunta2" name="pregunta2" aria-label="Select an option">
+            <mat-radio-button value="V">Verdadero</mat-radio-button>
+            <mat-radio-button value="F">Falso</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-label class="label">3 - Las mediciones de voltaje siempre se hacen en serie.</mat-label>
+        <mat-radio-group color="primary" [(ngModel)]="pregunta3" name="pregunta3" aria-label="Select an option">
+            <mat-radio-button value="V">Verdadero</mat-radio-button>
+            <mat-radio-button value="F">Falso</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-label class="label">4 - Cuando conectamos 3 resistencias en serie, la primera recibe más corriente que la última.</mat-label>
+        <mat-radio-group color="primary" [(ngModel)]="pregunta4" name="pregunta4" aria-label="Select an option">
+            <mat-radio-button value="V">Verdadero</mat-radio-button>
+            <mat-radio-button value="F">Falso</mat-radio-button>
+        </mat-radio-group>
+        
+        <mat-label class="label">5 - Con las bandas de colores pintadas en el cuerpo de las resistencias, además de su valor en OHM, también podemos conocer su tolerancia y su potencia máxima.</mat-label>
+        <mat-radio-group color="primary"[(ngModel)]="pregunta5" name="pregunta5" aria-label="Select an option">
+            <mat-radio-button value="V">Verdadero</mat-radio-button>
+            <mat-radio-button value="F">Falso</mat-radio-button>
+        </mat-radio-group>
+        
+        <mat-label class="label">6 - En un circuito en paralelo, el voltaje aplicado es siempre el mismo.</mat-label>
+        <mat-radio-group color="primary" [(ngModel)]="pregunta6" name="pregunta6" aria-label="Select an option">
+            <mat-radio-button value="V">Verdadero</mat-radio-button>
+            <mat-radio-button value="F">Falso</mat-radio-button>
+        </mat-radio-group>
+        <button mat-raised-button color="primary">Verificar</button>
+        <button mat-raised-button color="primary">Verificar</button>
+    </form>
+
+
+
+
+</div>

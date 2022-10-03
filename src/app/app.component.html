@@ -1,13 +1,52 @@
 
-<img >
-
 
 <mat-card>
   <div class="mat-card-img"><img class="mat-card-isologo" mat-card-xl-image src="./assets/isologo.JPG" ></div>
-  <mat-card-title>Prueba API</mat-card-title>
-  <mat-card-subtitle>Front para prueba de API generada por Raul <b>el loco </b>Borda</mat-card-subtitle>
+  <mat-card-title>Hackathon <b>2022</b> del Instituto Leibnitz.</mat-card-title>
+  
   <mat-card-content>
-    
+    <div *ngIf="paso=='0'">
+      <mat-card-subtitle>Seleccione la carrea:</mat-card-subtitle>
+      <div class="example-button-row">
+
+        <button mat-raised-button color="primary" style="width: 100%; height: 100px; margin-top: 25px;" (click)="carrera='AS'; paso='1';"><mat-icon >computer</mat-icon> AS</button>
+        <button mat-raised-button color="primary" style="width: 100%; height: 100px; margin-top: 25px;" (click)="carrera='TSH'; paso='1';"><mat-icon >memory</mat-icon> TSH</button>
+
+      </div>
+    </div>
+    <div *ngIf="paso=='1'">
+      <mat-card-subtitle>Seleccione la dificultad de la carrera {{carrera}}:</mat-card-subtitle>
+      <div class="example-button-row">
+        
+        <button mat-raised-button color="primary" style="width: 100%;height: 100px; margin-top: 25px;" 
+          (click)="dificultad='INICIAL'; paso='2';" *ngIf="carrera=='AS'" ><mat-icon >child_care</mat-icon> Inicial</button>
+        <button mat-raised-button color="primary" style="width: 100%;height: 100px; margin-top: 25px;" 
+          (click)="dificultad='BASICO'; paso='2';"><mat-icon >face</mat-icon> Básico</button>
+        <button mat-raised-button color="primary" style="width: 100%;height: 100px; margin-top: 25px;" 
+          (click)="dificultad='AVANZADO'; paso='2';"><mat-icon >adb</mat-icon> Avanzado</button>
+
+
+        <button mat-stroked-button color="primary" style="width: 100%; margin-top: 25px;" (click)="dificultad=''; paso='0';"><mat-icon >arrow_back</mat-icon> Volver</button>
+      </div>
+    </div>
+    <div *ngIf="paso=='2'">
+      <div *ngIf="dificultad=='INICIAL'">
+        <app-inicial [carrera]="carrera"></app-inicial>
+      </div>
+      <div *ngIf="dificultad=='BASICO'">
+        <app-basico [carrera]="carrera"></app-basico>
+      </div>
+      <div *ngIf="dificultad=='AVANZADO'">
+        <app-avanzado [carrera]="carrera"></app-avanzado>
+      </div>
+    </div>
+
+
+
+
+
+
+<div *ngIf="paso=='otro'">
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="outline" style="width: 400px;padding-right: 10px;">
     <mat-label>API</mat-label>
@@ -61,13 +100,22 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+<mat-card-actions>
+  <button mat-button (click)="verificar()">Deco frase</button>
+</mat-card-actions>
+<h4 (*ngIf)="frase" style="text-align: center;">{{frase}}</h4>
+<h1 (*ngIf)="validacion" style="text-align: center;">{{validacion}}</h1>
+</div>
+
+
+
+
+
+
 
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button (click)="verificar()">Deco frase</button>
-  </mat-card-actions>
-  <h4 (*ngIf)="frase" style="text-align: center;">{{frase}}</h4>
-  <h1 (*ngIf)="validacion" style="text-align: center;">{{validacion}}</h1>
+
+
 </mat-card>
 
 

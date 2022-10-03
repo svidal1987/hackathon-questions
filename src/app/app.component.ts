@@ -8,6 +8,13 @@ import { CallerService } from './caller.service';
 })
 export class AppComponent {
   
+  paso:string='0';
+  carrera:string="";
+  dificultad:string="";
+
+
+
+
   urlApi = 'https://hackatonapi-production.up.railway.app/input?word='
   urlApiPost= 'https://hackatonapi-production.up.railway.app/control'
   variable = 'output'

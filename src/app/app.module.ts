@@ -52,10 +52,16 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
 import {CdkStepperModule} from '@angular/cdk/stepper';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
+import { InicialComponent } from './inicial/inicial.component';
+import { BasicoComponent } from './basico/basico.component';
+import { AvanzadoComponent } from './avanzado/avanzado.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InicialComponent,
+    BasicoComponent,
+    AvanzadoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+.mat-radio-button ~ .mat-radio-button {
+    margin: 16px;
+    margin-left: 25px;
+  }
+
+.label{
+    font-size: 23px;
+    margin-top: 10px;
+    
+}
