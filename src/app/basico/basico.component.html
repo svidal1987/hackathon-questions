@@ -3,10 +3,11 @@
 </div>
 <div *ngIf="carrera=='TSH'">
 
-    <mat-card-subtitle>Para descargar las instrucciones responder con Verdadero-Falso las siguientes afirmaciones</mat-card-subtitle>
+    
 
-    <form style="display: grid;">
-        
+    <form style="display: grid;" *ngIf="verificacion==undefined">
+        <mat-card-subtitle>Para descargar las instrucciones responder con Verdadero-Falso las siguientes afirmaciones</mat-card-subtitle>
+
         <mat-label class="label">1 - La ley del ohm expresa que la corriente es inversamente proporcional al voltaje y directamente proporcional a la resistencia.</mat-label>
         <mat-radio-group color="primary" [(ngModel)]="pregunta1" name="pregunta1" aria-label="Select an option">
             <mat-radio-button value="V">Verdadero</mat-radio-button>
@@ -42,9 +43,15 @@
             <mat-radio-button value="V">Verdadero</mat-radio-button>
             <mat-radio-button value="F">Falso</mat-radio-button>
         </mat-radio-group>
-        <button mat-raised-button color="primary">Verificar</button>
+        <button mat-raised-button color="primary" (click)="verificar()">Verificar</button>
     </form>
-
+    <div *ngIf="verificacion==false" style="text-align: center;margin: 25px;">
+        <mat-label class="label">Chan, tenes respuestas incorrectas volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
+        <img src="./assets/fallo.jpg">
+    </div>
+    <div *ngIf="verificacion==true">
+        <a href="./assets/google.pdf" target="_blank">Descarga instrucciones</a>
+    </div>
 
 
 

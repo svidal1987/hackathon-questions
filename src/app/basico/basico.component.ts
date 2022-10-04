@@ -19,7 +19,19 @@ export class BasicoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  verificacion?:boolean=undefined;
   verificar(){
-    
+    if(this.pregunta1=='F'
+      && this.pregunta2=='V'
+      && this.pregunta3=='F'
+      && this.pregunta4=='F'
+      && this.pregunta5=='F'
+      && this.pregunta6=='V'
+    ){
+      this.verificacion=true
+    }else{
+      this.verificacion=false
+      new Promise( resolve => setTimeout(()=>{window.location.reload();}, 10000) )
+    }
   }
 }
