@@ -47,7 +47,9 @@
     </form>
     <div *ngIf="verificacion==false" style="text-align: center;margin: 25px;">
         <mat-label class="label">Chan, tenes respuestas incorrectas volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
-        <img src="./assets/fallo.jpg">
+        <video width="320" height="240" autoplay>
+            <source src="./assets/video/failed.mp4" type="video/mp4">
+        </video> 
     </div>
     <div *ngIf="verificacion==true">
         <a href="./assets/google.pdf" target="_blank">Descarga instrucciones</a>

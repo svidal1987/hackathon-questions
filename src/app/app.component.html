@@ -9,29 +9,85 @@
   
   <mat-card-content>
     <div *ngIf="paso=='0'">
-      <mat-card-subtitle>Seleccione la carrea:</mat-card-subtitle>
+      <mat-card-subtitle>Seleccione la carrera:</mat-card-subtitle>
       <div class="example-button-row">
 
-        <button mat-raised-button color="primary" style="width: 100%; height: 100px; margin-top: 25px;" (click)="carrera='AS'; paso='1';"><mat-icon >computer</mat-icon> AS</button>
-        <button mat-raised-button color="primary" style="width: 100%; height: 100px; margin-top: 25px;" (click)="carrera='TSH'; paso='1';"><mat-icon >memory</mat-icon> TSH</button>
+        <!-- <button mat-raised-button color="primary" style="width: 100%; height: 100px; margin-top: 25px;" (click)="carrera='AS'; paso='1';">
+          <mat-icon >computer</mat-icon> AS</button> -->
+        <!-- <button mat-raised-button color="primary" style="width: 100%; height: 100px; margin-top: 25px;" (click)="carrera='TSH'; paso='1';">
+          <img src="./assets/icons/procesador.png"> TSH</button> -->
+          <div class="button-container">
+          <mat-card (click)="carrera='AS'; paso='1';"  class="as-container">
+            <!-- <div >
+              <img mat-card-image src="./assets/icons/programmer.png" class="as">
+            </div> -->
+            <mat-card-title class="as-title">AS</mat-card-title>
+          </mat-card>
+
+          <mat-card (click)="carrera='TSH'; paso='1';" class="tsh-container">
+            <!-- <div >
+              <img mat-card-image src="./assets/icons/administrator.png" class="tsh">
+            </div> -->
+            <mat-card-title class="tsh-title">TSH</mat-card-title>
+          </mat-card>
+        </div>
 
       </div>
     </div>
-    <div *ngIf="paso=='1'">
+    <div *ngIf="paso=='1' && carrera=='AS'">
       <mat-card-subtitle>Seleccione la dificultad de la carrera {{carrera}}:</mat-card-subtitle>
       <div class="example-button-row">
-        
-        <button mat-raised-button color="primary" style="width: 100%;height: 100px; margin-top: 25px;" 
-          (click)="dificultad='INICIAL'; paso='2';" *ngIf="carrera=='AS'" ><mat-icon >child_care</mat-icon> Inicial</button>
-        <button mat-raised-button color="primary" style="width: 100%;height: 100px; margin-top: 25px;" 
-          (click)="dificultad='BASICO'; paso='2';"><mat-icon >face</mat-icon> Básico</button>
-        <button mat-raised-button color="primary" style="width: 100%;height: 100px; margin-top: 25px;" 
-          (click)="dificultad='AVANZADO'; paso='2';"><mat-icon >adb</mat-icon> Avanzado</button>
-
-
-        <button mat-stroked-button color="primary" style="width: 100%; margin-top: 25px;" (click)="dificultad=''; paso='0';"><mat-icon >arrow_back</mat-icon> Volver</button>
+          <div class="button-container">
+            <mat-card class="inicial-container" (click)="dificultad='INICIAL'; paso='2';" *ngIf="carrera=='AS'">
+              <div >
+                <img mat-card-image src="./assets/icons/baby.png" class="inicial">
+              </div>
+              <mat-card-title class="inicial-title">INICIAL</mat-card-title>
+            </mat-card>
+            <mat-card class="basico-container" (click)="dificultad='BASICO'; paso='2';" >
+              <div >
+                <img mat-card-image src="./assets/icons/coding.png" class="basico">
+              </div>
+              <mat-card-title class="basico-title">BASICO</mat-card-title>
+            </mat-card>
+            <mat-card class="avanzado-container" (click)="dificultad='AVANZADO'; paso='2';" >
+              <div >
+                <img mat-card-image src="./assets/icons/hacker(1).png" class="avanzado">
+              </div>
+              <mat-card-title class="avanzado-title">AVANZADO</mat-card-title>
+            </mat-card>
+          </div>
+        <!-- <button mat-stroked-button color="primary" style="width: 100%; margin-top: 25px;" (click)="dificultad=''; paso='0';"><mat-icon >arrow_back</mat-icon> Volver</button> -->
       </div>
     </div>
+
+
+    <div *ngIf="paso=='1' && carrera=='TSH'">
+      <mat-card-subtitle>Seleccione la dificultad de la carrera {{carrera}}:</mat-card-subtitle>
+      <div class="example-button-row">
+          <div class="button-container">
+
+            <mat-card class="basico-container" (click)="dificultad='BASICO'; paso='2';" >
+              <div >
+                <img mat-card-image src="./assets/icons/electrical-circuit.png" class="basico">
+              </div>
+              <mat-card-title class="basico-title">BASICO</mat-card-title>
+            </mat-card>
+            <mat-card class="avanzado-container" (click)="dificultad='AVANZADO'; paso='2';" >
+              <div >
+                <img mat-card-image src="./assets/icons/pcb-board.png" class="avanzado">
+              </div>
+              <mat-card-title class="avanzado-title">AVANZADO</mat-card-title>
+            </mat-card>
+          </div>
+        <!-- <button mat-stroked-button color="primary" style="width: 100%; margin-top: 25px;" (click)="dificultad=''; paso='0';"><mat-icon >arrow_back</mat-icon> Volver</button> -->
+      </div>
+    </div>
+
+
+
+
+
     <div *ngIf="paso=='2'">
       <div *ngIf="dificultad=='INICIAL'">
         <app-inicial [carrera]="carrera"></app-inicial>
@@ -53,7 +109,8 @@
 
 <footer>
   <div class="footer">
-  <a href="https://www.serlino.com.ar"><img class="img-serlino" src="https://www.serlino.com.ar/wp-content/uploads/2021/03/cropped-logo_blanco_transparente-3.png"></a>
+  <!-- <a href="https://www.serlino.com.ar"><img class="img-serlino" src="https://www.serlino.com.ar/wp-content/uploads/2021/03/cropped-logo_blanco_transparente-3.png"></a> -->
+  <a href="https://www.serlino.com.ar"><img class="img-serlino" src="./assets/SerLiNo_logo3.png"></a>
   <a href="https://www.binamics.com.ar" style="margin-top: auto;margin-bottom: auto;"><img class="img-binamics" src="https://www.binamics.com.ar/images/logo_pie_2.png"></a>
   </div>
 </footer>
