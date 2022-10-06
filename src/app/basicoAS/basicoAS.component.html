@@ -1,5 +1,12 @@
+    <!-- Primer paso-->
+    <!--  pdf-->
+    <!--  password-->
+
+    <!-- Segundo paso-->
+    <!--  pdf y json-->
 
 
+    <!--Aregar password-->
     <div *ngIf="verificacion==undefined">
         <mat-card-subtitle>Descarga el documento <a [href]="pdf1">PDF</a> y descubre el password:</mat-card-subtitle>
 
@@ -13,14 +20,14 @@
       <button mat-raised-button color="primary" (click)="verificar()">Verificar</button>
     </div>
     <div *ngIf="verificacion==false" style="text-align: center;margin: 25px;">
-        <mat-label class="label">Chan, respuesta incorrecta volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
+        <mat-label class="label">Chan, tenes respuestas incorrectas volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
         <video width="320" height="240" autoplay>
-            <source src="./assets/video/bsod.mp4" type="video/mp4">
+            <source src="./assets/video/failed.mp4" type="video/mp4">
         </video> 
     </div>
     <div *ngIf="verificacion==true">
         <a [href]="pdf2" target="_blank">Descarga instrucciones del siguiente paso</a><br>
-        <video width="320" height="240" autoplay>
-            <source src="./assets/video/think-smart-meme.mp4" type="video/mp4">
-        </video> 
+        <a [href]="pdf3" target="_blank">Descarga archivo de datos JSON</a>
     </div>
+
+

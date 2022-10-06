@@ -1,11 +1,23 @@
-<div *ngIf="carrera=='AS'">
-    <p>Definir para Básico AS </p>
-</div>
-<div *ngIf="carrera=='TSH'">
+    <!--Aregar password-->
+    <div *ngIf="verificacion1==undefined">
+        <mat-card-subtitle>Descarga el documento <a [href]="pdf1">PDF</a> y descubre el password:</mat-card-subtitle>
 
-    
-
-    <form style="display: grid;" *ngIf="verificacion==undefined">
+        <form style="display: grid;">
+            <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput [(ngModel)]="password" name="password" placeholder="Password">
+            </mat-form-field>
+            
+      </form>
+      <button mat-raised-button color="primary" (click)="verificar1()">Verificar</button>
+    </div>
+    <div *ngIf="verificacion1==false" style="text-align: center;margin: 25px;">
+        <mat-label class="label">Chan, respuesta incorrecta volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
+        <video width="320" height="240" autoplay>
+            <source src="./assets/video/bsod.mp4" type="video/mp4">
+        </video> 
+    </div>
+    <form style="display: grid;" *ngIf="verificacion1==true && verificacion2==undefined">
         <mat-card-subtitle>Para descargar las instrucciones responder con Verdadero-Falso las siguientes afirmaciones</mat-card-subtitle>
 
         <mat-label class="label">1 - La ley del ohm expresa que la corriente es inversamente proporcional al voltaje y directamente proporcional a la resistencia.</mat-label>
@@ -43,18 +55,15 @@
             <mat-radio-button value="V">Verdadero</mat-radio-button>
             <mat-radio-button value="F">Falso</mat-radio-button>
         </mat-radio-group>
-        <button mat-raised-button color="primary" (click)="verificar()">Verificar</button>
+        <button mat-raised-button color="primary" (click)="verificar2()">Verificar</button>
     </form>
-    <div *ngIf="verificacion==false" style="text-align: center;margin: 25px;">
+    <div *ngIf="verificacion1==true && verificacion2==false" style="text-align: center;margin: 25px;">
         <mat-label class="label">Chan, tenes respuestas incorrectas volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
         <video width="320" height="240" autoplay>
             <source src="./assets/video/failed.mp4" type="video/mp4">
         </video> 
     </div>
-    <div *ngIf="verificacion==true">
-        <a href="./assets/google.pdf" target="_blank">Descarga instrucciones</a>
+    <div *ngIf="verificacion1==true && verificacion2==true">
+        <a [href]="pdf2" target="_blank">Descarga instrucciones del siguiente paso</a>
     </div>
 
-
-
-</div>

@@ -53,15 +53,19 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import { InicialComponent } from './inicial/inicial.component';
-import { BasicoComponent } from './basico/basico.component';
-import { AvanzadoComponent } from './avanzado/avanzado.component';
+import { BasicoASComponent } from './basicoAS/basicoAS.component';
+import { BasicoTSHComponent } from './basicoTSH/basicoTSH.component';
+import { AvanzadoASComponent } from './avanzadoAS/avanzadoAS.component';
+import { AvanzadoTSHComponent } from './avanzadoTSH/avanzadoTSH.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicialComponent,
-    BasicoComponent,
-    AvanzadoComponent
+    BasicoASComponent,
+    BasicoTSHComponent,
+    AvanzadoASComponent,
+    AvanzadoTSHComponent
   ],
   imports: [
     BrowserModule,

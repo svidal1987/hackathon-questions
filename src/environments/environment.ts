@@ -1,16 +1,25 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  //AS
+  
+  primero_pdf1:'aaaa',
+  primero_pdf2:'./assets/google.pdf',
+  primero_password:'./assets/google.pdf',
+
+  segundo_pdf1:'./assets/google.pdf',
+  segundo_pdf2:'./assets/google.pdf',
+  segundo_pdf3:'./assets/google.pdf',
+  segundo_password:'aaaa',
+
+  tercero_pdf1:'./assets/google.pdf',
+  tercero_pdf2:'./assets/google.pdf',
+  tercero_password:'aaaa',
+
+  //TSH
+  basico_pdf1:'./assets/google.pdf',
+  basico_pdf2:'./assets/google.pdf',
+  basico_password:'aaaa',
+
 };
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.

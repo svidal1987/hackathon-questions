@@ -59,24 +59,24 @@ footer{
     font-weight: 900;
     text-align: center;
     color: #fe681f;
-    width: 300px;
+    width: 250px;
     margin-top: auto !important;
     margin-bottom: auto !important;
     height: 107px;
+    line-height: 100px;
 }
 .tsh-container, .as-container{
     box-shadow: none;
     border: 2px dashed #fe681f;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     display: inherit;
 }
 .tsh, .as{
-    max-width: 250px;
     margin: auto;
     padding: 50px 50px 50px 50px;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .button-container{
@@ -97,13 +97,13 @@ footer{
 .inicial-container,.basico-container,.avanzado-container{
     box-shadow: none;
     border: 2px dashed #fe681f;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     
 }
 .inicial,.basico,.avanzado{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: auto;
     padding: 50px 50px 20px 50px;
     filter: invert(50%) sepia(26%) saturate(4121%) hue-rotate(346deg) brightness(101%) contrast(103%);

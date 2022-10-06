@@ -2,7 +2,6 @@
 
 <mat-card>
   <div class="mat-card-img">
-    <!-- <img class="mat-card-isologo" mat-card-xl-image src="./assets/institutologo2.jpg"> -->
     <img class="mat-card-isologo" mat-card-xl-image src="./assets/isologo.JPG" >
   </div>
   <mat-card-title>Hackathon <b>2022</b> - Instituto Leibnitz.</mat-card-title>
@@ -12,22 +11,12 @@
       <mat-card-subtitle>Seleccione la carrera:</mat-card-subtitle>
       <div class="example-button-row">
 
-        <!-- <button mat-raised-button color="primary" style="width: 100%; height: 100px; margin-top: 25px;" (click)="carrera='AS'; paso='1';">
-          <mat-icon >computer</mat-icon> AS</button> -->
-        <!-- <button mat-raised-button color="primary" style="width: 100%; height: 100px; margin-top: 25px;" (click)="carrera='TSH'; paso='1';">
-          <img src="./assets/icons/procesador.png"> TSH</button> -->
           <div class="button-container">
           <mat-card (click)="carrera='AS'; paso='1';"  class="as-container">
-            <!-- <div >
-              <img mat-card-image src="./assets/icons/programmer.png" class="as">
-            </div> -->
             <mat-card-title class="as-title">AS</mat-card-title>
           </mat-card>
 
           <mat-card (click)="carrera='TSH'; paso='1';" class="tsh-container">
-            <!-- <div >
-              <img mat-card-image src="./assets/icons/administrator.png" class="tsh">
-            </div> -->
             <mat-card-title class="tsh-title">TSH</mat-card-title>
           </mat-card>
         </div>
@@ -42,19 +31,19 @@
               <div >
                 <img mat-card-image src="./assets/icons/baby.png" class="inicial">
               </div>
-              <mat-card-title class="inicial-title">INICIAL</mat-card-title>
+              <mat-card-title class="inicial-title">1º</mat-card-title>
             </mat-card>
             <mat-card class="basico-container" (click)="dificultad='BASICO'; paso='2';" >
               <div >
                 <img mat-card-image src="./assets/icons/coding.png" class="basico">
               </div>
-              <mat-card-title class="basico-title">BASICO</mat-card-title>
+              <mat-card-title class="basico-title">2º</mat-card-title>
             </mat-card>
             <mat-card class="avanzado-container" (click)="dificultad='AVANZADO'; paso='2';" >
               <div >
                 <img mat-card-image src="./assets/icons/hacker(1).png" class="avanzado">
               </div>
-              <mat-card-title class="avanzado-title">AVANZADO</mat-card-title>
+              <mat-card-title class="avanzado-title">3º</mat-card-title>
             </mat-card>
           </div>
         <!-- <button mat-stroked-button color="primary" style="width: 100%; margin-top: 25px;" (click)="dificultad=''; paso='0';"><mat-icon >arrow_back</mat-icon> Volver</button> -->
@@ -90,13 +79,19 @@
 
     <div *ngIf="paso=='2'">
       <div *ngIf="dificultad=='INICIAL'">
-        <app-inicial [carrera]="carrera"></app-inicial>
+        <app-inicial ></app-inicial>
       </div>
-      <div *ngIf="dificultad=='BASICO'">
-        <app-basico [carrera]="carrera"></app-basico>
+      <div *ngIf="dificultad=='BASICO' && carrera=='AS'">
+        <app-basico-AS ></app-basico-AS>
       </div>
-      <div *ngIf="dificultad=='AVANZADO'">
-        <app-avanzado [carrera]="carrera"></app-avanzado>
+      <div *ngIf="dificultad=='BASICO' && carrera=='TSH'">
+        <app-basico-TSH ></app-basico-TSH>
+      </div>
+      <div *ngIf="dificultad=='AVANZADO' && carrera=='AS'">
+        <app-avanzado-AS></app-avanzado-AS>
+      </div>
+      <div *ngIf="dificultad=='AVANZADO' && carrera=='TSH'">
+        <app-avanzado-TSH></app-avanzado-TSH>
       </div>
     </div>
 
