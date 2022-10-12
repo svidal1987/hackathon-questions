@@ -2,24 +2,43 @@
     <!--Matemarico pdf y password-->
   <!--  Segundo paso-->
     <!--Api pdf -->
-    <div *ngIf="verificacion==undefined">
-      <mat-card-subtitle>Descarga el documento <a [href]="pdf1">PDF</a> y descubre el password:</mat-card-subtitle>
-
-      <form style="display: grid;">
-          <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
-          <input type="password" matInput [(ngModel)]="password" name="password" placeholder="Password">
-          </mat-form-field>
-          
-    </form>
-    <button mat-raised-button color="primary" (click)="verificar()">Verificar</button>
-  </div>
-  <div *ngIf="verificacion==false" style="text-align: center;margin: 25px;">
-      <mat-label class="label">Chan, tenes respuestas incorrectas volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
-      <video width="320" height="240" autoplay>
-          <source src="./assets/video/failed.mp4" type="video/mp4">
-      </video> 
-  </div>
-  <div *ngIf="verificacion==true">
-      <a [href]="pdf2" target="_blank">Descarga instrucciones del siguiente paso</a><br>
+    <div class="button-container">
+      <div *ngIf="verificacion==undefined">
+          <mat-card class="inicial-container" >
+              <a [href]="pdf1">
+              <img src="./assets/pdf(1).png" class="icon-pdf">
+              </a>
+              <mat-card-subtitle>Descarga el documento PDF y descubre el password:</mat-card-subtitle>
+  
+              <form style="display: grid;">
+                  <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput [(ngModel)]="password" name="password" placeholder="Password">
+                  </mat-form-field>
+                  
+          </form>
+          <button mat-raised-button color="primary" (click)="verificar()">Verificar</button>
+          </mat-card>
+      </div>
+      <div *ngIf="verificacion==false" style="text-align: center;margin: 25px;">
+        <mat-card class="inicial-container" >
+            <div style="text-align: center;margin: 25px;">
+                <mat-label class="label">Chan, respuesta incorrecta volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
+                
+                <img src="./assets/video/tony-stark-iron-man.gif" width="320">
+            </div>
+        </mat-card>
+      </div>
+      <div *ngIf="verificacion==true">
+          <mat-card class="inicial-container" >
+              <div style="text-align: center;margin: 25px;height: 250px; display: grid;">
+                  <div style=" margin-top: auto;margin-bottom: auto;">
+                      <a [href]="pdf2">
+                          <img src="./assets/pdf(1).png" class="icon-pdf">
+                      </a>
+                      <mat-card-subtitle>Descarga instrucciones del siguiente paso</mat-card-subtitle>
+                  </div>
+              </div>
+          </mat-card>
+      </div>
   </div>

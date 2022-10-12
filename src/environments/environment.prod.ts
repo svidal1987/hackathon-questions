@@ -1,9 +1,9 @@
 export const environment = {
     production: true,
     //AS
-    primero_pdf1:'aaaa',
+    primero_pdf1:'./assets/google.pdf',
     primero_pdf2:'./assets/google.pdf',
-    primero_password:'./assets/google.pdf',
+    primero_password:'aaaa',
   
     segundo_pdf1:'./assets/google.pdf',
     segundo_pdf2:'./assets/google.pdf',
@@ -18,4 +18,8 @@ export const environment = {
     basico_pdf1:'./assets/google.pdf',
     basico_pdf2:'./assets/google.pdf',
     basico_password:'aaaa',
+
+    avanzado_pdf1:'./assets/google.pdf',
+    avanzado_pdf2:'./assets/google.pdf',
+    avanzado_password:'aaaa',
 };

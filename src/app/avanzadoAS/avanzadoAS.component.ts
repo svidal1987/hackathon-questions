@@ -12,6 +12,7 @@ export class AvanzadoASComponent implements OnInit {
   passwordVerdadero:string=environment.tercero_password
   pdf1=environment.tercero_pdf1
   pdf2=environment.tercero_pdf2
+  
 
   password?:string
   verificacion?:boolean=undefined;

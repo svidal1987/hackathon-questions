@@ -15,20 +15,41 @@ export class InicialComponent implements OnInit {
 
   password?:string
 
-  verificacion?:boolean
+
+  pregunta1?:string
+  pregunta2?:string
+  pregunta3?:string
+  pregunta4?:string
+  pregunta5?:string
+  pregunta6?:string
+
+  verificacion1?:boolean=undefined;
+  verificacion2?:boolean=undefined;
   constructor() { }
 
   ngOnInit(): void {
   }
 
 
-  verificar(){
-    this.verificacion = this.password==this.passwordVerdadero
+  verificar1(){
+    console.log(this.password,this.passwordVerdadero)
+    this.verificacion1 = this.password==this.passwordVerdadero
     if(this.password!=this.passwordVerdadero){
       new Promise( resolve => setTimeout(()=>{window.location.reload();}, 10000) )
     }
   }
-
-
-
+  verificar2(){
+    if(this.pregunta1=='F'
+      && this.pregunta2=='F'
+      && this.pregunta3=='V'
+      && this.pregunta4=='F'
+      && this.pregunta5=='V'
+      && this.pregunta6=='V'
+    ){
+      this.verificacion2=true
+    }else{
+      this.verificacion2=false
+      new Promise( resolve => setTimeout(()=>{window.location.reload();}, 10000) )
+    }
+  }
 }
