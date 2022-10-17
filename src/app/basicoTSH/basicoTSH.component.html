@@ -56,16 +56,7 @@
         </mat-radio-group>
         <button mat-raised-button color="primary" (click)="verificar2()">Verificar</button>
     </form>
-    <div *ngIf="verificacion1==false || verificacion2==false" style="display: inline-block;">
-        <mat-card class="inicial-container" >
-            <div style="text-align: center;margin: 25px;">
-                <mat-label class="label">Chan, respuesta incorrecta volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
-                
-                <img src="./assets/video/tony-stark-iron-man.gif" width="320">
-            </div>
-        </mat-card>
-        
-    </div>
+
 
     <div *ngIf="verificacion2 == true" style="display: inline-block;">
         <mat-card class="inicial-container" >
@@ -78,6 +69,18 @@
                 </div>
             </div>
         </mat-card>
+    </div>
+
+
+    <div *ngIf="verificacion1==false || verificacion2==false" style="display: inline-block;">
+        <mat-card class="inicial-container" >
+            <div style="text-align: center;margin: 25px;">
+                <mat-label class="label">Chan, respuesta incorrecta volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
+                
+                <img [src]="error_gif" width="320">
+            </div>
+        </mat-card>
+        
     </div>
 
 </div>

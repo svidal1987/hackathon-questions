@@ -1,0 +1,175 @@
+static void Main(string[] args)
+        {
+            bool exits = false;
+
+
+            string opciones;
+
+            do
+            {
+                Console.Write("INGRESE EL PROCESO QUE DESEA EJECUTAR: " + System.Environment.NewLine + "1: RECORRER LOS NUMEROS DEL 1 AL 100. MUESTRA LOS NUMEROS PARES Y DIVISIBLES ENTRE 3 POR SEPARADO." + System.Environment.NewLine + "2: DADO UN ARREGLO INGRESADO POR EL USUARIO. MUESTRA DE FORMA ORDENADA POR EL METODO BURBUJA" + System.Environment.NewLine + "3: DIBUJAR LA LETRA 'A' EN UNA MATRIZ, " + System.Environment.NewLine + "4: EN UNA MATRIZ DE 4 FILAS Y 4 COLUMNAS. IMPRIMIR LA DIAGONAL PRINCIPAL" + System.Environment.NewLine + "INGRESE RESPUESTA: ");
+
+                opciones = Console.ReadLine();
+                switch (opciones)
+                {
+                    case "1":
+                        ejercicioUno();
+
+                        exits = true;
+                        break;
+                    case "2":
+                        ejercicioDos();
+
+                        exits = true;
+                        break;
+                    case "3":
+                        ejercicioTres();
+
+                        exits = true;
+                        break;
+                    case "4":
+                        ejercicioCuatro();
+
+                        exits = true;
+                        break;
+
+                    default:
+                        Console.Write("OPCIÓN INCORRECTA. ¿DESEA INTENTARLO NUEVAMENTE? S/N: ");
+                        if (Console.ReadLine().ToUpper() != "S")
+                        {
+                            exits = false;
+                        } 
+                        else
+                        {
+                            Console.Clear();
+                        }
+
+                        break;
+                }
+
+            } while (exits == false);
+
+            Console.WriteLine("GRACIAS");
+        }
+
+        public static int ejercicioUno()
+        {
+            Console.Clear();
+            Console.WriteLine("NUMEROS PARES");
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            Console.WriteLine("NUMEROS DIVISBLES POR 3");
+
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 5 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            Console.ReadKey();
+        }
+
+        public static void ejercicioDos()
+        {
+            /*Console.Clear();
+            int cant = 0;
+            int auxi = 0;
+
+            Console.Write("CUANTOS ELEMENTOS: ");
+            cant = Console.ReadLine();
+
+            int[] mat = new int[cant + 1];
+            // INGRESO
+            for (i = 1; i <= cant; i++)
+            {
+                Console.Write($"POSICIÓN {x} = ");
+                mat[x] = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = 1; i <= cant - 1; i++)
+            {
+                for (j = i + 1; j <= cant; j++);
+                {
+                    if ((mat[i] < mat[j]))
+                    {
+                        auxi = mat[j];
+                        mat[j] = mat[i];
+                        mat[i] = auxi;
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("ARREGLO ORDENADO ASCENDENTE");
+            for (int i = 1; i <= cant; i++)
+            {
+                Console.WriteLine(mat[i]);
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("ARREGLO ORDENADO DESCENDENTE");
+            for (int i = cant; i <= 1; i--)
+            {
+                Console.WriteLine(mat[i]);
+            }
+
+            Console.ReadKey();*/
+        }
+
+
+        public static void ejercicioTres()
+        {
+            Console.Clear();
+            int mi = 0;
+
+            Console.Write("TAMAÑO DE LA MATRIZ: ");
+            linea =int.Parse(Console.ReadLine());
+
+            linea = (linea % 2 == 0 ? linea + 1 : linea);
+            string[,] mat = new string[linea + 1, linea + 1];
+
+            for (int i = 1; i <= linea; i++)
+            {
+                for (int j = 1; j <= linea; j++)
+                {
+                    mat[i, j] = " ";
+                }
+            }
+
+            // IMPRIME EN PANTALLA
+            for (int i = 1; i <= linea; i++)
+            {
+                for (int j = 1; j <= linea; j++)
+                {
+                    Console.SetCursorPosition(j, i + 1);
+                    Console.Write(mat[i, j]);
+                }
+            }
+
+            Console.Clear(); 
+
+            // ARMA LA LETRA
+            mi = linea / 2 + 1;
+            for (int i = 1; i <= linea; i++)
+            {
+                mat[i, 1] = "*";
+                mat[i, linea] = "*";
+                mat[mi, i] = "*";
+                mat[1, i] = "*";
+            }
+
+            Console.WriteLine();
+        }
+
+        public static void ejercicioCuatro()
+        {
+            Console.WriteLine("Resolverlo");
+        }

@@ -26,15 +26,7 @@
           <button mat-raised-button color="primary" (click)="verificar()">Verificar</button>
           </mat-card>
       </div>
-      <div *ngIf="verificacion==false" style="text-align: center;margin: 25px; display: inline-block;">
-        <mat-card class="inicial-container" >
-            <div style="text-align: center;margin: 25px;">
-                <mat-label class="label">Chan, respuesta incorrecta volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
-                
-                <img src="./assets/video/tony-stark-iron-man.gif" width="320">
-            </div>
-        </mat-card>
-      </div>
+
       <div *ngIf="verificacion==true" style="display: inline-block;">
           <mat-card class="inicial-container" >
               <div style="text-align: center;margin: 25px;height: 250px; display: grid;">
@@ -46,5 +38,16 @@
                   </div>
               </div>
           </mat-card>
+      </div>
+
+
+      <div *ngIf="verificacion==false" style="text-align: center;margin: 25px; display: inline-block;">
+        <mat-card class="inicial-container" >
+            <div style="text-align: center;margin: 25px;">
+                <mat-label class="label">Chan, respuesta incorrecta volvé a intentar, la página se recargará en 10 seg.</mat-label><br>
+                
+                <img [src]="error_gif" width="320">
+            </div>
+        </mat-card>
       </div>
   </div>

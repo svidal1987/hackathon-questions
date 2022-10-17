@@ -38,4 +38,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 20px;
     height: 65px;
   }
-  
+  canvas {
+    height: 100%; /* we need these for full-screen effect */
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+  }
+   
+  .container {
+    display: flex;
+    justify-content: center;
+  }
