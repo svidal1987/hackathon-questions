@@ -52,7 +52,7 @@ export class InicialComponent implements OnInit {
         spread: 300,
         origin: { x: 0.45,y:0.45 },
       })
-    new Promise( resolve => setTimeout(()=>{this.renderer2.setStyle( canvas, 'visibility','hidden');}, 5000) )
+    new Promise( resolve => setTimeout(()=>{this.renderer2.setStyle( canvas, 'visibility','hidden');}, 4000) )
   }
 
 

@@ -4,11 +4,9 @@
   <div class="mat-card-img">
     <img class="mat-card-isologo" mat-card-xl-image src="./assets/isologo.JPG" >
   </div>
-  <!-- <mat-card-title>Hackathon <b>2022</b> - Instituto Leibnitz.</mat-card-title> -->
   
   <mat-card-content>
     <div *ngIf="paso=='0'">
-      <mat-card-subtitle>Seleccione la carrera:</mat-card-subtitle>
       <div class="example-button-row">
 
           <div class="button-container">
@@ -24,7 +22,6 @@
       </div>
     </div>
     <div *ngIf="paso=='1' && carrera=='AS'">
-      <mat-card-subtitle>Seleccione la dificultad de la carrera {{carrera}}:</mat-card-subtitle>
       <div class="example-button-row">
           <div class="button-container">
             <mat-card class="inicial-container" (click)="dificultad='INICIAL'; paso='2';" *ngIf="carrera=='AS'">
@@ -46,13 +43,11 @@
               <mat-card-title class="avanzado-title">3º</mat-card-title>
             </mat-card>
           </div>
-        <!-- <button mat-stroked-button color="primary" style="width: 100%; margin-top: 25px;" (click)="dificultad=''; paso='0';"><mat-icon >arrow_back</mat-icon> Volver</button> -->
       </div>
     </div>
 
 
     <div *ngIf="paso=='1' && carrera=='TSH'">
-      <mat-card-subtitle>Seleccione la dificultad de la carrera {{carrera}}:</mat-card-subtitle>
       <div class="example-button-row">
           <div class="button-container">
 
@@ -69,7 +64,6 @@
               <mat-card-title class="avanzado-title">AVANZADO</mat-card-title>
             </mat-card>
           </div>
-        <!-- <button mat-stroked-button color="primary" style="width: 100%; margin-top: 25px;" (click)="dificultad=''; paso='0';"><mat-icon >arrow_back</mat-icon> Volver</button> -->
       </div>
     </div>
 

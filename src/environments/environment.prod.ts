@@ -1,7 +1,7 @@
 export const environment = {
     production: true,
     //AS
-    
+
     primero_pdf1:'./assets/pdf/64a25ce6fe9b818f7c78bf7be0f607bd.pdf',
     primero_pdf2:'./assets/txt/1ASetapa3.txt',
     primero_password:[
@@ -25,13 +25,13 @@ export const environment = {
     tercero_password:'1011011110',
   
     //TSH
-    basico_pdf1:'./assets/google.pdf',
-    basico_pdf2:'./assets/google.pdf',
-    basico_password:'aaaa',
+    basico_pdf1:'./assets/pdf/64bf9eb7f9ac8fe7b017c8d1fc7bad27.pdf',
+    basico_pdf2:'./assets/pdf/e7431eb5415aaf3f09697ce12524037c.pdf',
+    basico_password:'1511422010',
 
-    avanzado_pdf1:'./assets/google.pdf',
-    avanzado_pdf2:'./assets/google.pdf',
-    avanzado_password:'aaaa',
+    avanzado_pdf1:'./assets/pdf/22bccd3d0fd48f62573a792118739384.pdf',
+    avanzado_pdf2:'./assets/pdf/d75f50ecd58ebc3c3dc3a5adf89fccdb.pdf',
+    avanzado_password:'15114220102',
 
 
 
