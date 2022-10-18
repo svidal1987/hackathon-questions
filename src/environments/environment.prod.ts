@@ -37,18 +37,18 @@ export const environment = {
 
 
     errors_gif:[
+      './assets/video/dario-barassi.gif',
+      './assets/video/dario-barassi.gif',
       './assets/video/tony-stark-iron-man.gif',
       './assets/video/bsod.gif',
       './assets/video/nopes-nopez.gif',
       './assets/video/saquontroll-saquonjudge26.gif',
+      './assets/video/risa-dario-barassi.gif',
       './assets/video/toy-story-woody.gif',
-      //'./assets/video/no-angry.gif',
-      './assets/video/dario-barassi.gif',
       './assets/video/oh-nooo-facepalm-baby.gif',
       './assets/video/rocksideroad-snowball.gif',
-      './assets/video/tenor.gif',
-      //'./assets/video/epic-embed.gif'
-      './assets/video/risa-dario-barassi.gif'
+      './assets/video/tenor.gif'
+      
     ]
 
 };

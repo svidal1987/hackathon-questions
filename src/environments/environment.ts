@@ -44,12 +44,9 @@ export const environment = {
     './assets/video/saquontroll-saquonjudge26.gif',
     './assets/video/risa-dario-barassi.gif',
     './assets/video/toy-story-woody.gif',
-    //'./assets/video/no-angry.gif',
-    
     './assets/video/oh-nooo-facepalm-baby.gif',
     './assets/video/rocksideroad-snowball.gif',
-    './assets/video/tenor.gif',
-    //'./assets/video/epic-embed.gif'
+    './assets/video/tenor.gif'
     
   ]
 
